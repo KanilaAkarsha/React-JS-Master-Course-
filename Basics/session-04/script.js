@@ -1,18 +1,18 @@
 // Method 01: Check ./session-04/index.html file
 // Method 02: Import named exports from the file math.js:
-import { add, subtract, user } from "./math.js"; // Modular import
+//import { add, subtract, user } from "./math.js"; // Modular import
 // Import a default export from the file message.js:
-import message from "./message.js"; // default import
+//import message from "./message.js"; // default import
 
-// console.log("Session 04 Here!");
+ console.log("Session 04 Here!");
 
 // JavaScript Event Loop execution
 
 // console.log("Start");
 
-// setTimeout(() => console.log("Timeout callback"), 1000);
+ setTimeout(() => console.log("Timeout callback"), 1000);
 
-// console.log("End");
+ console.log("End");
 
 // JavaScript Promise
 
@@ -26,52 +26,52 @@ let myPromise = new Promise((resolve, reject) => {
   }
 });
 
-// console.log("Start"); // Main Thread: Task 01
+console.log("Start"); // Main Thread: Task 01
 
-// Async: Task 02
+//Async: Task 02
 
-// myPromise.then(message => {
-//     console.log(message); // Operation is successful!
-// }).catch(error => {
-//     console.error(error); // Operation is failed!
-// }).finally(() => {
-//     console.log("Promise is completed!"); // Final
-// });
+myPromise.then(message => {
+    console.log(message); // Operation is successful!
+}).catch(error => {
+    console.error(error); // Operation is failed!
+}).finally(() => {
+    console.log("Promise is completed!"); // Final
+});
 
-// console.log("End"); // Main Thread: Task 03
+console.log("End"); // Main Thread: Task 03
 
 // JavaScript Async and Await
 
 // ES05: Javascript Function
-async function initializeApp() {
-  try {
-    const message = await myPromise;
-    console.log("Message : ", message);
+// async function initializeApp() {
+//   try {
+//     const message = await myPromise;
+//     console.log("Message : ", message);
 
-    let userResponse = await fetch(
-      "https://jsonplaceholder.typicode.com/users/1"
-    );
-    let user = await userResponse.json();
+//     let userResponse = await fetch(
+//       "https://jsonplaceholder.typicode.com/users/1"
+//     );
+//     let user = await userResponse.json();
 
-    if (user?.id) {
-      console.log("(1) User : ", user);
+//     if (user?.id) {
+//       console.log("(1) User : ", user);
 
-      const postsResponse = await fetch(
-        `https://jsonplaceholder.typicode.com/posts?userId=${user.id}`
-      );
-      const posts = await postsResponse.json();
+//       const postsResponse = await fetch(
+//         `https://jsonplaceholder.typicode.com/posts?userId=${user.id}`
+//       );
+//       const posts = await postsResponse.json();
 
-      console.log("(2) Posts : ", posts);
-    }
-  } catch (error) {
-    console.error("Error fetching data", error);
-  }
-}
+//       console.log("(2) Posts : ", posts);
+//     }
+//   } catch (error) {
+//     console.error("Error fetching data", error);
+//   }
+// }
 
 // Call the async initializeApp function
-initializeApp();
+// initializeApp();
 
-console.log("I'm here after the async function!");
+// console.log("I'm here after the async function!");
 
 // Fetch Data with a JavaScript Promise
 // function fetchDataPromise() {
@@ -101,22 +101,22 @@ console.log("I'm here after the async function!");
 // JavaScript Callbacks
 
 // Define a function that accepts a callback
-function fetchDataCallback(myCallback) {
-  console.log("Fetching Started!");
+// function fetchDataCallback(myCallback) {
+//   console.log("Fetching Started!");
 
-  setTimeout(() => {
-    let data = { name: "John", age: 30 };
-    myCallback(data);
-    console.log("Timeout Completed!");
-  }, 3000); // Simulate network request with a delay of 3 seconds
+//   setTimeout(() => {
+//     let data = { name: "John", age: 30 };
+//     myCallback(data);
+//     console.log("Timeout Completed!");
+//   }, 3000); // Simulate network request with a delay of 3 seconds
 
-  console.log("Fetching Completed!");
-}
+//   console.log("Fetching Completed!");
+// }
 
-// Define a callback function
-function handleData(data) {
-  console.log("Data received : ", data);
-}
+// // Define a callback function
+// function handleData(data) {
+//   console.log("Data received : ", data);
+// }
 
 // fetchDataCallback(handleData);
 
@@ -129,24 +129,24 @@ function handleData(data) {
 
 // Session Storage
 
-const userName = sessionStorage.getItem("name");
+// const userName = sessionStorage.getItem("name");
 
-if (userName === null) {
-  // console.log("Name is not set in the session storage");
-} else {
-  // console.log("Name is :", userName);
-}
+// if (userName === null) {
+//   // console.log("Name is not set in the session storage");
+// } else {
+//   // console.log("Name is :", userName);
+// }
 
 // sessionStorage.setItem("name", "John");
 
 // Local Storage
 
-const userEmail = localStorage.getItem("email");
+// const userEmail = localStorage.getItem("email");
 
-if (userEmail === null) {
-  // console.log("Email is not set in the local storage");
-} else {
-  // console.log("Email is :", userEmail);
-}
+// if (userEmail === null) {
+//   // console.log("Email is not set in the local storage");
+// } else {
+//   // console.log("Email is :", userEmail);
+// }
 
 // localStorage.setItem("email", "john@gmail.com");
