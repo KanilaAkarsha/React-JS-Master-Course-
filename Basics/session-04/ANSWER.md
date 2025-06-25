@@ -40,13 +40,13 @@
  - The event loop is a mechanism that handles asynchronous operations. It checks the call stack and task queue, and moves tasks from the queue to the stack when the stack is empty, enabling non-blocking behavior.
 
 6. 
-- function delayedGreeting(name, callback) {
+ -   function delayedGreeting(name, callback) {
  -     setTimeout(() => {
  -       callback(`Hello, ${name}!`);
  -     }, 2000);
  -   }
 
-  -  // Example usage:
-  -  delayedGreeting("Kanila", function(message) {
-  -    console.log(message);
-  -  });
+ -   // Example usage:
+ -     delayedGreeting("Kanila", function(message) {
+ -      console.log(message);
+ -     });
