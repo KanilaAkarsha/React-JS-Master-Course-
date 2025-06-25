@@ -6,19 +6,22 @@
 6. Write a function called `delayedGreeting` that takes a name as an argument and logs a greeting message to the console after a 2-second delay using `setTimeout`. Use a callback function to achieve this.
 
 
+
+
+
 1. 	
     - Pending
 	- Fulfilled (Resolved)
 	- Rejected
 
 2. 
- - The async keyword makes a function return a Promise, regardless of what the function returns. If a value is returned, it’s wrapped in a   resolved Promise.
+   - The async keyword makes a function return a Promise, regardless of what the function returns. If a value is returned, it’s wrapped in a   resolved Promise.
     - async function example() {
     -   return "Hello"; // Actually returns Promise.resolve("Hello")
     - }
 
 3. 
- - The await keyword is used inside an async function to pause the execution until the Promise is resolved or rejected.
+  - The await keyword is used inside an async function to pause the execution until the Promise is resolved or rejected.
 
     - async function fetchData() {
     - const data = await fetch('https://api.example.com/data');
@@ -41,10 +44,10 @@
 
 6. 
  -    function delayedGreeting(name, callback) {
-        setTimeout(() => {
-         callback(`Hello, ${name}!`);
-       }, 2000);
-      }
+ -       setTimeout(() => {
+ -        callback(`Hello, ${name}!`);
+ -      }, 2000);
+ -     }
 
  -   // Example usage:
  -     delayedGreeting("Kanila", function(message) {
