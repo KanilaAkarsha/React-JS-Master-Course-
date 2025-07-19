@@ -1,5 +1,5 @@
 function fetchData(callback) {
-    console.log("Fetching data.....");
+    console.log("Fetching data...");
 
     setTimeout(() => {
         const data = { id: 1, name: "John Doe" };
@@ -13,4 +13,3 @@ function handleData(data) {
 }
 
 fetchData(handleData);
-

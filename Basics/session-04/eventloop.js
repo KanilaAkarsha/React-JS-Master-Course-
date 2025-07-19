@@ -2,7 +2,7 @@
 let myPromise = new Promise((resolve, reject) => {
   let success = true;
   if (success) {
-    setTimeout(() => resolve("Promise resolved!"), 4000);
+    setTimeout(() => resolve("Promise resolved!"), 3000);
   } else {
     reject("Promise rejected!");
   }
